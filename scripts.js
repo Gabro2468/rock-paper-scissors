@@ -1,38 +1,66 @@
 const options = ["rock","paper","scissors"];
 
-function computerChoice() {
+function computerChoiceRandom() {
     return options[Math.floor(Math.random() * 3)];
 } 
 
 function round(player,computer){
-    player = prompt("Choose one of the three options(rock,paper,scissors): ")
-    player = player.toLowerCase();
-    computer = computerChoice()
     console.log("Players choice : " + player)
     console.log("Computer choice : " + computer)
     switch (true){
         case (player === computer):
-            console.log("Draw!")
-            break
+            alert("Draw!")
+            return null;
         case (player == "rock" && computer == "scissors"):
-            console.log("You win! Rock dulls scissors!")
-            break
+            alert("You win! Rock dulls scissors!")
+            return true;
         case (player == "rock" && computer == "paper"):
-            console.log("You lose! Paper surrounds rock!")
-            break
+            alert("You lose! Paper surrounds rock!")
+            return false;
         case (player == "paper" && computer == "rock"):
-            console.log("You win! Paper surrounds rock!")
-            break   
+            alert("You win! Paper surrounds rock!")
+            return true;
         case (player == "paper" && computer == "scissors"):
-            console.log("You lose! Scissors cut paper!")
-            break
+            alert("You lose! Scissors cut paper!")
+            return false;
         case (player == "scissors" && computer == "paper"):
-            console.log("You win! Scissors cut paper!")
-            break    
+            alert("You win! Scissors cut paper!")
+            return true;    
         case (player == "scissors" && computer == "rock"):
-            console.log("You lose! Rock dulls scissors!")
-            break
+            alert("You lose! Rock dulls scissors!")
+            return false;
         default:
-            alert("Enter a proper option!") 
+            alert("Enter a proper option!")
+            round();
+    }
+}
+
+function game(){
+    let score = [0,0];
+    for(let i = 1; i<=5 ;i++){
+        playerChoice = prompt("Choose one of the three options(rock,paper,scissors): ")
+        playerChoice = playerChoice.toLowerCase();
+        computerChoice = computerChoiceRandom();
+        let outcome = round(playerChoice,computerChoice);
+        if(outcome == true){
+            score[0] += 1;
+        }
+        else if(outcome == false){
+            score[1] += 1;
+        }
+        else if(outcome == null){
+            console.log("Added one round");
+            i--
+        }
+        else {
+            console.log("Error")
+        }
+        alert("Player " + score[0] +" : " + score[1] + " Computer")
+    }
+    if (score[0] > score[1]){
+        alert("YOU WON! Congratulations!")
+    }
+    else{
+        alert("You lost. Good luck next time!")
     }
 }
