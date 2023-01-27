@@ -68,11 +68,6 @@ body {
     margin: 0;
 }
 
-#scoreboard{
-    color: azure;
-    
-}
-
 #buttons{
     display: flex;
     flex-wrap: wrap;

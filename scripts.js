@@ -4,6 +4,14 @@ function computerChoiceRandom() {
     return options[Math.floor(Math.random() * 3)];
 } 
 
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', round("rock",computerChoiceRandom()))
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', round("paper",computerChoiceRandom()));
+
+const scissors = document.querySelector('#scissors');
+
 function round(player,computer){
     console.log("Players choice : " + player)
     console.log("Computer choice : " + computer)
@@ -35,28 +43,3 @@ function round(player,computer){
     }
 }
 
-function game(){
-    let score = [0,0];
-    while(score[0] <= 5 || score[1] <= 5){
-        playerChoice = prompt("Choose one of the three options(rock,paper,scissors): ")
-        playerChoice = playerChoice.toLowerCase();
-        computerChoice = computerChoiceRandom();
-        let outcome = round(playerChoice,computerChoice);
-        if(outcome == true){
-            score[0] += 1;
-        }
-        else if(outcome == false){
-            score[1] += 1;
-        }
-        else {
-            console.log("Draw")
-        }
-        alert("Player " + score[0] +" : " + score[1] + " Computer")
-    }
-    if (score[0] > score[1]){
-        alert("YOU WON! Congratulations!")
-    }
-    else if(score[1] > score[0]){
-        alert("You lost. Good luck next time!")
-    }
-}
