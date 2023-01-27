@@ -4,6 +4,8 @@ function computerChoiceRandom() {
     return options[Math.floor(Math.random() * 3)];
 } 
 
+
+
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', round("rock",computerChoiceRandom()))
 
@@ -11,6 +13,10 @@ const paper = document.querySelector('#paper');
 paper.addEventListener('click', round("paper",computerChoiceRandom()));
 
 const scissors = document.querySelector('#scissors');
+
+
+
+
 
 function round(player,computer){
     console.log("Players choice : " + player)
