@@ -37,7 +37,7 @@ function round(player,computer){
 
 function game(){
     let score = [0,0];
-    for(let i = 1; i<=5 ;i++){
+    while(score[0] <= 5 || score[1] <= 5){
         playerChoice = prompt("Choose one of the three options(rock,paper,scissors): ")
         playerChoice = playerChoice.toLowerCase();
         computerChoice = computerChoiceRandom();
@@ -48,19 +48,15 @@ function game(){
         else if(outcome == false){
             score[1] += 1;
         }
-        else if(outcome == null){
-            console.log("Added one round");
-            i--
-        }
         else {
-            console.log("Error")
+            console.log("Draw")
         }
         alert("Player " + score[0] +" : " + score[1] + " Computer")
     }
     if (score[0] > score[1]){
         alert("YOU WON! Congratulations!")
     }
-    else{
+    else if(score[1] > score[0]){
         alert("You lost. Good luck next time!")
     }
 }
