@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, this is simple HTML5 game ;)</h1>
 <h3 align="center">That's my first project</h3>
-![gabriel img](https://user-images.githubusercontent.com/20500755/216667845-edc2d0f8-fce5-475b-94dd-ae60e515a97b.png)
+<img src="https://user-images.githubusercontent.com/20500755/216667845-edc2d0f8-fce5-475b-94dd-ae60e515a97b.png" > </img>
 - 📫 How to reach me **linkedIn:**
 
 <h3 align="left">Connect with me:</h3>
