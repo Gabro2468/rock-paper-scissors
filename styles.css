@@ -7,7 +7,7 @@ body {
     height: 100%;
     background-image: linear-gradient(to bottom, #fff, rgb(77, 92, 149));
     background-size: 100% 100%;
-    animation: animateBackground 1s linear infinite;
+    animation: animateBackground 5s linear infinite;
 }
 @keyframes animateBackground {
     0% {
