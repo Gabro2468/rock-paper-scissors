@@ -4,15 +4,20 @@ function computerChoiceRandom() {
     return options[Math.floor(Math.random() * 3)];
 } 
 
-
-
 const rock = document.querySelector('#rock');
-rock.addEventListener('click', round("rock",computerChoiceRandom()))
-
 const paper = document.querySelector('#paper');
-paper.addEventListener('click', round("paper",computerChoiceRandom()));
-
 const scissors = document.querySelector('#scissors');
+
+//deklaracje funkcji w sposob anonimowy
+
+rock.addEventListener('click', function() { round("rock",computerChoiceRandom()) });
+
+paper.addEventListener('click', function() { round("paper",computerChoiceRandom()) });
+
+scissors.addEventListener('click', function() { round("scissors",computerChoiceRandom()) });
+
+
+
 
 
 
