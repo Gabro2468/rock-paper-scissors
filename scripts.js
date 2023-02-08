@@ -35,9 +35,23 @@ buttons.forEach(function(btn) {
             computerScore += 1;
         }
         else{
-            alert("Draw!")
+            console.log("Draw!")
         }
+        
         score.innerHTML = "Player " + playerScore + " : " + computerScore + " Computer"
+
+        switch (true){
+            case(playerScore==5):
+                score.innerHTML = "CONGRATS!! YOU HAVE WON " + playerScore + " to " + computerScore
+                playerScore = 0;
+                computerScore = 0;
+
+            case(computerScore==5):
+                score.innerHTML = "Sorry! You have lost " + playerScore + " to " + computerScore
+                playerScore = 0;
+                computerScore = 0;
+                
+        }
     })
 })
 
