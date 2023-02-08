@@ -5,6 +5,10 @@ html{
 body {
     
     height: 100%;
+    margin: 0;
+}
+
+/*
     background-image: linear-gradient(to bottom, #fff, rgb(77, 92, 149));
     background-size: 100% 100%;
     animation: animateBackground 5s linear infinite;
@@ -20,14 +24,9 @@ body {
       background-position: 0% 50%;
     }
   }
-/* styles for main-section */
+*/
 
-@font-face {
-    font-family: arcadeFont;
-    font-style: normal;
-    font-weight: 400;
-    src: local("arcade-font.ttf"), url(https://www.fontspace.com/public-pixel-font-f72305)
-}
+/* styles for main-section */
 
 #main {
     height: 100%;
@@ -49,7 +48,6 @@ body {
     margin: 0;
     color: goldenrod;
     font-size: 3rem;
-    font-style: arcadeFont;
 }
 
 #title h2 {
@@ -151,6 +149,7 @@ body {
 #footer {
     flex: 1;
     text-align: end;
+    margin-bottom: 0px;
     background-color: rgb(34, 34, 34);
     color: azure;
 }
