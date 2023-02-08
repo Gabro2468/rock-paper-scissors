@@ -1,16 +1,45 @@
-const options = ["rock","paper","scissors"];
+const options = ["rock","paper","scissors","rock","paper","scissors"];
 
 function computerChoiceRandom() {
-    return options[Math.floor(Math.random() * 3)];
+    return options[Math.floor(Math.random() * 6)];
 } 
 
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
-rock.addEventListener('click', function() { round("rock",computerChoiceRandom()) } );
-paper.addEventListener('click', function() { round("paper",computerChoiceRandom()) } );
-scissors.addEventListener('click', function() { round("scissors",computerChoiceRandom()) } );
+const score = document.querySelector('#score');
+const buttons = document.querySelectorAll('.button')
+
+let playerChoice = ""
+let playerScore = 0
+let computerScore = 0
+
+rock.addEventListener('click', function() {
+    playerChoice = "rock" });
+
+paper.addEventListener('click', function() {
+    playerChoice = "paper" });
+
+scissors.addEventListener('click', function() {
+    playerChoice = "scissors" });
+
+buttons.forEach(function(btn) {
+    btn.addEventListener('click',function() {
+        let computerChoice = computerChoiceRandom();
+        let result = round(playerChoice,computerChoice);
+        if (result==true){
+            playerScore += 1;
+        }
+        else if(result==false){
+            computerScore += 1;
+        }
+        else{
+            alert("Draw!")
+        }
+        score.innerHTML = "Player " + playerScore + " : " + computerScore + " Computer"
+    })
+})
 
 
 function round(player,computer){
@@ -18,29 +47,28 @@ function round(player,computer){
     console.log("Computer choice : " + computer)
     switch (true){
         case (player === computer):
-            alert("Draw!")
+            console.log("Draw!")
             return null;
         case (player == "rock" && computer == "scissors"):
-            alert("You win! Rock dulls scissors!")
+            console.log("You win! Rock dulls scissors!")
             return true;
         case (player == "rock" && computer == "paper"):
-            alert("You lose! Paper surrounds rock!")
+            console.log("You lose! Paper surrounds rock!")
             return false;
         case (player == "paper" && computer == "rock"):
-            alert("You win! Paper surrounds rock!")
+            console.log("You win! Paper surrounds rock!")
             return true;
         case (player == "paper" && computer == "scissors"):
-            alert("You lose! Scissors cut paper!")
+            console.log("You lose! Scissors cut paper!")
             return false;
         case (player == "scissors" && computer == "paper"):
-            alert("You win! Scissors cut paper!")
+            console.log("You win! Scissors cut paper!")
             return true;    
         case (player == "scissors" && computer == "rock"):
-            alert("You lose! Rock dulls scissors!")
+            console.log("You lose! Rock dulls scissors!")
             return false;
         default:
-            alert("Enter a proper option!")
-            round();
+            console.log("Error")
     }
 }
 
