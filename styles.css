@@ -3,10 +3,28 @@ html{
 }
 
 body {
-    background-color: rgb(167, 167, 167);
+    
     height: 100%;
     margin: 0;
 }
+
+/*
+    background-image: linear-gradient(to bottom, #fff, rgb(77, 92, 149));
+    background-size: 100% 100%;
+    animation: animateBackground 5s linear infinite;
+}
+@keyframes animateBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+*/
 
 /* styles for main-section */
 
