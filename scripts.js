@@ -5,12 +5,13 @@ function computerChoiceRandom() {
 } 
 
 const rock = document.querySelector('#rock');
-rock.addEventListener('click', round("rock",computerChoiceRandom()))
-
 const paper = document.querySelector('#paper');
-paper.addEventListener('click', round("paper",computerChoiceRandom()));
-
 const scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click', function() { round("rock",computerChoiceRandom()) } );
+paper.addEventListener('click', function() { round("paper",computerChoiceRandom()) } );
+scissors.addEventListener('click', function() { round("scissors",computerChoiceRandom()) } );
+
 
 function round(player,computer){
     console.log("Players choice : " + player)
