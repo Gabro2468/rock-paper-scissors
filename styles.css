@@ -30,6 +30,7 @@ body {
     margin: 0;
     color: goldenrod;
     font-size: 3rem;
+    font-family: 'VT323',monospace;
 }
 
 #title h2 {
@@ -59,6 +60,13 @@ body {
     justify-content: center;
     gap: 3rem;
     margin: 0;
+}
+
+#score{
+    font-family: 'VT323',monospace;
+    font-size: 4rem;
+    color: azure;
+    text-align: center;
 }
 
 #buttons{

@@ -42,15 +42,17 @@ buttons.forEach(function(btn) {
 
         switch (true){
             case(playerScore==5):
-                score.innerHTML = "CONGRATS!! YOU HAVE WON " + playerScore + " to " + computerScore
+                score.innerHTML = "CONGRATS!! You have won " + playerScore + " to " + computerScore
                 playerScore = 0;
                 computerScore = 0;
-
+                break;
             case(computerScore==5):
                 score.innerHTML = "Sorry! You have lost " + playerScore + " to " + computerScore
                 playerScore = 0;
                 computerScore = 0;
-                
+                break;
+            default:
+                console.log("Not there yet");
         }
     })
 })
